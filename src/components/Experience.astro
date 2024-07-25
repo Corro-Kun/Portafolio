@@ -1,0 +1,65 @@
+---
+interface Props {
+    date: string;
+	title: string;
+    description: string;
+}
+
+const {date, title, description} = Astro.props;
+---
+
+<section>
+    <div class="date" >
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="15"  height="15"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-circle">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 3.34a10 10 0 1 1 -4.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 4.995 -8.336z" />
+        </svg>
+        <p>{date}</p>
+    </div>
+    <p class="title" >{title}</p>
+    <p class="description" >{description}</p>
+</section>
+
+<style>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    section{
+        padding: 20px 0;
+        width: 600px;
+        padding-left: 20px;
+        border-left: 1px solid var(--Color-Secondary);
+
+        view-timeline-name: --revealing;
+        view-timeline-axis: block;
+
+        animation: linear 0.5s fadeIn;
+        animation-timeline: --revealing;
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+    }
+    .date{
+        width: 100%;
+        position: relative;
+    }
+    .date svg{
+        top: 2px;
+        left: -28px;
+        position: absolute;
+        color: var(--Color-Secondary);
+    }
+    .date p{
+        color: var(--Text-Color-Secondary);
+    }
+    .title{
+        color: var(--Text-Color);
+        line-height: 30px;
+    }
+    .description{
+        color: var(--Text-Color-Secondary);
+    }
+</style>

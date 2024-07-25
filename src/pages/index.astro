@@ -1,7 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import About from '@/components/About.astro';
+import Experience from '@/components/Experience.astro';
 ---
 <Layout title="Portafolio de Kevin Pava | Corro-Kun">
     <About />
+    <div class="experience" >
+        <Experience 
+            date='jul. 2024' 
+            title='Futurefy' 
+            description='Actualmente trabajando como freelancer en el soporte en desarrollo web y resolviendo problemas del SEO en las páginas de los clientes.' 
+        />
+        <Experience 
+            date='abr. 2024' 
+            title='UNITY SOLUTIONS SAS' 
+            description='Actualmente trabajando como practicando en Desarrollador de software.' 
+        />
+    </div>
 </Layout>
+
+<style>
+    .experience{
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+</style>
