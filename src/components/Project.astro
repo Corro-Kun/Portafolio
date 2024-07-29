@@ -14,6 +14,11 @@ interface Props {
 
 const { title, platform, icon, appColor, repo, tools, colors, description, video } = Astro.props;
 
+const color1 = colors.color1;
+const color2 = colors.color2;
+const color3 = colors.color3;
+const color4 = colors.color4;
+
 const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#000';
 ---
 
@@ -48,7 +53,7 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
         <section class="tools" >
             <img src={tools} alt="">
         </section>
-        <section class="color" style={`background: linear-gradient(90deg, ${colors.color1} 25%, ${colors.color2} 25%, ${colors.color2} 50%, ${colors.color3} 50%, ${colors.color3} 75%, ${colors.color4} 75%, ${colors.color4} 100%);`} >
+        <section class="color"  >
 
         </section>
         <section class="description" >
@@ -60,15 +65,13 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
     </div>
 </div>
 
-<style define:vars={{ icon, appColor, colorPlatform, }} >
+<style define:vars={{ icon, appColor, colorPlatform, color1, color2, color3, color4}} >
     @keyframes fadeIn {
         from {
             opacity: 0;
-            scale: 25%;
         }
         to {
             opacity: 1;
-            scale: 100%;
         }
     }
     .main{
@@ -78,6 +81,7 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
 
         align-items: center;
         justify-content: center;
+        /*
         view-timeline-name: --revealing;
         view-timeline-axis: block;
 
@@ -85,6 +89,7 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
         animation-timeline: --revealing;
         animation-range: entry 25% cover 30%;
         animation-fill-mode: both;
+        */
     }
     .bento{
         display: grid;
@@ -96,6 +101,10 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
     section{
         border-radius: 10px;
         box-shadow: 0 0 2px var(--Color-Secondary);
+
+        animation: fadeIn linear both;
+        animation-timeline: view();
+        animation-range: entry 25% cover 30%;
     }
     .title{
         display: flex;
@@ -168,8 +177,13 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
         justify-content: center;
     }
     .color{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--color1) 25%, var(--color2) 25%, var(--color2) 50%, var(--color3) 50%, var(--color3) 75%, var(--color4) 75%, var(--color4) 100%);
+        background-size: 100% 200%;
         grid-column: span 3 / span 1;
         grid-row: span 10 / span 1;
+        animation: moveGradient 1s linear infinite;
     }
     .description{
         padding: 10px;
@@ -180,9 +194,9 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
         overflow: hidden;
     }
     .description p{
-        color: var(--Color-Secondary);
+        color: var(--Text-Color-Secondary);
         text-align: center;
-        word-break: break-all;
+        word-break: break-word;
     }
     .icon-project{
         grid-column: span 1 / span 1;

@@ -5,6 +5,7 @@ import Experience from '@/components/Experience.astro';
 import ExperienceData from '@/data/Experience.data';
 import Project from '@/components/Project.astro';
 import ProjectData from '@/data/Project.data';
+import TableSkills from '@/components/TableSkills.astro';
 ---
 <Layout title="Portafolio de Kevin Pava | Corro-Kun">
     <About />
@@ -18,6 +19,8 @@ import ProjectData from '@/data/Project.data';
     {ProjectData.map(item => (
         <Project {...item} />
     ))}
+    <h5 class="title" >Herramientas</h5>
+    <TableSkills />
 </Layout>
 
 <style>

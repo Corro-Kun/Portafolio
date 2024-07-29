@@ -1,0 +1,37 @@
+---
+interface Props {
+    name: string;
+    color: string;
+}
+
+const {name, color} = Astro.props;
+---
+<section>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <slot />
+    </svg>
+</section>
+
+<style define:vars={{color}} >
+    div{
+
+    }
+    section{
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 0 2px var(--Color-Secondary);
+        transition: .2s;
+    }
+    section:hover{
+        background-color: var(--color);
+        color: #fff;
+    }
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+</style>
