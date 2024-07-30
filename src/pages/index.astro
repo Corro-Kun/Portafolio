@@ -8,19 +8,22 @@ import ProjectData from '@/data/Project.data';
 import TableSkills from '@/components/TableSkills.astro';
 ---
 <Layout title="Portafolio de Kevin Pava | Corro-Kun">
-    <About />
-    <h3 class="title" >Experiencia</h3>
+    <About id="inicio" />
+    <h3 id="Experiencia" class="title" >Experiencia</h3>
     <div class="experience" >
         {ExperienceData.map(item => (
             <Experience {...item} />
         ))}
     </div>
-    <h4 class="title" >Proyectos</h4>
+    <h4 id="Proyectos" class="title" >Proyectos</h4>
     {ProjectData.map(item => (
         <Project {...item} />
     ))}
-    <h5 class="title" >Herramientas</h5>
+    <h5 id="Herramientas" class="title" >Herramientas</h5>
     <TableSkills />
+    <footer>
+        <p>© 2024 Kevin Pava. Casi todos los derechos reservados</p>
+    </footer>
 </Layout>
 
 <style>
@@ -60,5 +63,12 @@ import TableSkills from '@/components/TableSkills.astro';
         animation-timeline: --revealing;
         animation-range: entry 25% cover 30%;
         animation-fill-mode: both;
+    }
+    footer{
+        margin-top: 50px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>
