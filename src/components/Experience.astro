@@ -34,8 +34,6 @@ const {date, date_end ,title, description} = Astro.props;
         width: 600px;
         padding-left: 20px;
         border-left: 1px solid var(--Color-Secondary);
-
-        
     }
     .date{
         width: 100%;
@@ -56,5 +54,11 @@ const {date, date_end ,title, description} = Astro.props;
     }
     .description{
         color: var(--Text-Color-Secondary);
+    }
+
+    @media screen and (max-width: 600px) {
+        section{
+            width: 100%;
+        }
     }
 </style>

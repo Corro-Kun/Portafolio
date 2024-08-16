@@ -5,13 +5,13 @@ const ExperienceData: Experience[] = [
         date: "jul. 2024",
         date_end: "Todavía trabajando",
         title: "Futurefy",
-        description: "Actualmente trabajando como freelancer en el soporte en desarrollo web y resolviendo problemas del SEO en las páginas de los clientes."
+        description: "Actualmente, trabajo como freelancer especializado en desarrollo web, brindando soporte técnico y soluciones a problemas de SEO para optimizar el rendimiento y la visibilidad de las páginas web de mis clientes."
     },
     {
         date: "abr. 2024",
         date_end: "Todavía trabajando",
         title: "UNITY SOLUTIONS SAS",
-        description: "Actualmente trabajando como practicando en Desarrollador de software."
+        description: "Actualmente trabajando como practicante en Desarrollador de software."
     }
 ];
 

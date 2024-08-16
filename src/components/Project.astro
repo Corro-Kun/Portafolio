@@ -76,9 +76,8 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
     }
     .main{
         display: flex;
-        margin: 40px 0;
-        height: 80vh;
-
+        width: 100%;
+        margin: 125px 0;
         align-items: center;
         justify-content: center;
         /*
@@ -204,5 +203,57 @@ const colorPlatform = platform === 1? '#0078D7': platform === 2? '#A4C639': '#00
         background-image: var(--icon);
         background-size: cover;
         background-color: var(--appColor);
+    }
+
+    @media screen and (max-width: 1100px) {
+        .bento{
+            width: 100%;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+        }
+        .title{
+            grid-column: span 2 / span 1;
+            grid-row: span 1 / span 1;
+        }
+        .platform{
+            grid-column: span 1 / span 1;
+            grid-row: span 1 / span 1;
+        }
+        .repo{
+            padding: 10px;
+            grid-column: span 3 / span 1;
+            grid-row: span 2 / span 1;
+        }
+        .repo picture{
+            width: 70px;
+            height: 70px;
+        }
+        .repo a{
+            margin-top: 10px;
+        }
+        .preview{
+            grid-column: span 3 / span 1;
+            grid-row: span 3 / span 1;
+        }
+        .tools{
+            padding: 10px;
+            grid-column: span 3 / span 1;
+            grid-row: span 4 / span 1;
+        }
+        .color{
+            height: 120px;
+            grid-column: span 3 / span 1;
+            grid-row: span 5 / span 1;
+        }
+        .description{
+            grid-column: span 2 / span 1;
+            grid-row: span 6 / span 1;
+        }
+        .icon-project{
+            background-position: center;
+            height: 125px;
+            grid-column: span 1 / span 1;
+            grid-row: span 6 / span 1;
+        }
     }
 </style>
