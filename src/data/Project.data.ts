@@ -32,6 +32,22 @@ const Projects = [
             color4: '#9BBEC8',
         },
         video: 'https://res.cloudinary.com/daqrkk4sr/video/upload/v1722037466/github/qlf6uwzfhyr9zazcchkm.webm'
+    },
+    {
+        title: 'DolHack',
+        description: 'Un sistema para administrar las clases de un profesor a sus estudiantes.',
+        platform: 3,
+        icon: "url('/icon/DolHack.png')" ,
+        appColor: '#282c36',
+        repo: 'https://github.com/Corro-Kun/DolHack2.0',
+        tools: 'https://skillicons.dev/icons?i=mysql,spring,react',
+        colors:{
+            color1: '#282c36',
+            color2: '#323946',
+            color3: '#fff',
+            color4: '#05a6e8',
+        },
+        video: 'https://res.cloudinary.com/daqrkk4sr/video/upload/v1729356948/github/nwaouixkb1zvd9h3dkyj.webm'
     }
 
 ] as Project[];
